@@ -14,12 +14,19 @@ module.exports = function (opts) {
 
   let app = express();
 
+  console.log('starting sass middleware');
+
   let sassMw = sassMiddleware({
     /* Options */
     src:  path.join(__dirname, '..', 'exercises', opts.exercise, 'src', 'sass'),
     dest: path.join(__dirname, '..', 'exercises', opts.exercise, 'public'),
+    debug: true,
     outputStyle: 'expanded'
   });
+
+  console.log(path.join(__dirname, '..', 'exercises', opts.exercise, 'src', 'sass'))
+
+  console.log(path.join(__dirname, '..', 'exercises', opts.exercise, 'public'))
 
   // Note: you must place sass-middleware *before* `express.static` or else it will
   // not work.

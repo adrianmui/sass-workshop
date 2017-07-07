@@ -30,7 +30,7 @@ This is the  project used for the <a title="Mike.Works" href="https://mike.works
 # What are the pieces?
 
 
-* [node-sass-middleware](https://github.com/sass/node-sass-middleware) for Sass compilation
+* [node-sass-middleware](https://github.com/sass/nnode-sass-middleware) for Sass compilation
 * [express](http://expressjs.com/) for serving HTML and CSS (compiled from Sass)
 * [commander](https://github.com/tj/commander.js) as a foundation for a CLI to run exerises
 * [A little CSS testing framework](https://github.com/mike-north/sass-workshop/blob/master/public/js/tester.js) for asserting that exercise goals have been reached!

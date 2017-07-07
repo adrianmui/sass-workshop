@@ -1,0 +1,23 @@
+body h1 {
+  color: #c46;
+}
+
+button {
+  padding: 2 10 2 10;
+  border: 1px solid #c46;
+  border-radius: 2px;
+}
+
+button.btn-primary {
+  color: white;
+  background-color: #c46;
+}
+
+button.btn-secondary {
+  color: black;
+  background-color: #edbcc8;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
