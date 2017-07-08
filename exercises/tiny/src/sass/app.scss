@@ -1,0 +1,13 @@
+$foo: 'm' 'p';
+$bar: 't' 'b' 'l' 'r';
+
+@each $first in $foo {
+  @each $second in $bar {
+    @for $i from 5 through 25 {
+      .#{$first}-#{$second}-#{$i} {
+        margin: #{$i}px;
+        padding: #{$i}px;
+      }
+    }
+  }
+}  
