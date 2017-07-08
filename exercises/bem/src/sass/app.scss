@@ -1,7 +1,18 @@
 @mixin btn-base($color, $opacity: 0.5) {
   background-color: $color;
+
+  .btn__price {
+    padding: 1px 3px 1px 3px;
+    color: #ffffff;
+    background-color: #008000;
+  }
+
   &:disabled {
     opacity: $opacity;
+    .btn__price {
+      background-color: #aaa;
+      
+    }
   }
 }
 
@@ -25,19 +36,6 @@ body {
 
   &--mode-secondary {
     @include btn-base(rgb(237, 188, 200));
-  }
-
-  &:disabled {
-    .btn__price {
-      background-color: #aaa;
-      
-    }
-  }
-
-  &__price {
-    padding: 1px 3px 1px 3px;
-    color: #ffffff;
-    background-color: #008000;
   }
 }
 

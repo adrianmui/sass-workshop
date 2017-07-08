@@ -15,24 +15,34 @@ body h1 {
   color: white;
 }
 
+.btn--mode-primary .btn__price {
+  padding: 1px 3px 1px 3px;
+  color: #ffffff;
+  background-color: #008000;
+}
+
 .btn--mode-primary:disabled {
   opacity: 0.5;
+}
+
+.btn--mode-primary:disabled .btn__price {
+  background-color: #aaa;
 }
 
 .btn--mode-secondary {
   background-color: #edbcc8;
 }
 
+.btn--mode-secondary .btn__price {
+  padding: 1px 3px 1px 3px;
+  color: #ffffff;
+  background-color: #008000;
+}
+
 .btn--mode-secondary:disabled {
   opacity: 0.5;
 }
 
-.btn:disabled .btn__price {
+.btn--mode-secondary:disabled .btn__price {
   background-color: #aaa;
-}
-
-.btn__price {
-  padding: 1px 3px 1px 3px;
-  color: #ffffff;
-  background-color: #008000;
 }
