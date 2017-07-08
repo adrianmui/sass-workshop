@@ -1,3 +1,10 @@
+@mixin btn-base($color, $opacity: 0.5) {
+  background-color: $color;
+  &:disabled {
+    opacity: $opacity;
+  }
+}
+
 body {
     h1 {
     color: #c69;
@@ -10,4 +17,27 @@ body {
   border-width: 1px;
   line-height: 20px;
   border-radius: 2px;
+
+  &--mode-primary {
+    @include btn-base(rgb(204, 68, 102));
+    color: white;
+  }
+
+  &--mode-secondary {
+    @include btn-base(rgb(237, 188, 200));
+  }
+
+  &:disabled {
+    .btn__price {
+      background-color: #aaa;
+      
+    }
+  }
+
+  &__price {
+    padding: 1px 3px 1px 3px;
+    color: #ffffff;
+    background-color: #008000;
+  }
 }
+
