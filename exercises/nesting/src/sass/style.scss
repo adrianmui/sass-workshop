@@ -1,7 +1,13 @@
 body {
-    h1 {
+  h1 {
     color: #c46;
   } 
+  h1:hover {
+    color: black;
+  }
+  h1:pristine {
+    color: white;
+  }
 }
 
 button {
