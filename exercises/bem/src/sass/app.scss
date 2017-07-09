@@ -1,6 +1,6 @@
 @mixin btn-base($color, $opacity: 0.5) {
   background-color: $color;
-
+  
   .btn__price {
     padding: 1px 3px 1px 3px;
     color: #ffffff;
