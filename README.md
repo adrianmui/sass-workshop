@@ -2,8 +2,9 @@ Adrian Mui
 
 SCSS introduction and best practices code done in /exercises folder under /<challenge>/src/sass/app.scss.
 
-Used @if, @mixins, @extend, nesting, and standard inheritance with best practices.
+Used @if, @mixins, @extend, @functions, nesting, and standard inheritance with best practices.
 
+july-8. fin.
 
 <p align='center'>
   <a href="https://mike.works" target='_blank'>
