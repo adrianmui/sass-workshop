@@ -22,14 +22,29 @@
     @include button-base(
       darken(
         adjust-hue($primary-color, 180deg),
-      $darkenpct)
+      $darkenpct) 
     );
   }
 }
 
+@function lin($val) {
+  $a: 0.055;
+
+  @if $val <= 0.0405 {
+    @return $val / 12.92;
+  }
+  @else if $val > 0.0405  {
+    @return pow(($val + $a) / (1 + $a), 2.4)
+  }
+}
+
 @function luminance($color) {
+  $red: lin(red($color / 255));
+  $blue: lin(blue($color / 255));
+  $green: lin(green($color / 255));
+  $val: (0.2126 * $red) +  (0.0722 * $blue) + (0.7152 * $green);
   /* REPLACE THIS WITH YOUR REAL FUNCTION */
-  @return 0.5;
+  @return $val;
 }
 
 $white_luminance: luminance(white);
