@@ -1,50 +1,86 @@
 .perks {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+}
+
+.perks--body {
+  width: 100%;
   max-width: 900px;
 }
 
-.perks .perks--groups {
+.perks--groups {
   display: flex;
 }
 
-.perks .perks--groups .perks--group {
-  flex: 1;
-  margin: 0px 5px;
+.perks--groups .perks--group {
+  flex-grow: 0;
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px 0px 0px;
   position: relative;
 }
 
-.perks .perks--groups .perks--group .perks--image {
+.perks--groups .perks--group .perks--image {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   top: 0;
   left: 0;
   height: 180px;
   width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: relative;
 }
 
-.perks .perks--groups .perks--group .perks--image h2 {
+.perks--groups .perks--group .perks--image h2 {
   font-size: 24px;
   position: absolute;
   bottom: 0;
+  font-weight: normal;
+  margin-bottom: 0px;
+  padding-bottom: 16px;
   text-align: center;
   width: inherit;
   color: white;
 }
 
-.perks .perks--groups .perks--list {
-  margin: 0px 5px;
-  width: 100%;
-  border: 1px solid grey;
+.perks--groups .perks--group .perks--list {
+  flex: auto;
+  border: 1px solid #E0E0E0;
 }
 
-.perks .perks--groups .perks--list .perks--item {
-  display: block;
+.perks--groups .perks--group .perks--list .perks--item {
   text-align: left;
-  border-top: 1px solid grey;
-  padding: 5px 10px;
+  font-size: 16px;
+  color: #616161;
+  border-top: 1px solid #E0E0E0;
+  padding: 12px 0px;
+  margin: 0px 18px;
 }
 
-.perks .perks--groups .perks--list .perks--item:first-child {
-  border: 0px;
+.perks--groups .perks--group .perks--list .perks--item:first-child {
+  margin-top: 10px;
+  border-top: none;
+}
+
+.perks--groups .perks--group .perks--list .perks--item:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (orientation: portrait) {
+  .perks {
+    display: flex;
+  }
+  .perks--groups {
+    display: flex;
+    flex-direction: column;
+  }
+  .perks--groups .perks--group {
+    flex: auto;
+    margin: 0px 0px 30px 0px;
+  }
+  .perks--groups .perks--group:last-child {
+    margin-bottom: 0px;
+  }
 }

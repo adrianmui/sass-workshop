@@ -1,58 +1,99 @@
-.perks {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 900px;
-  .perks--groups {
+$grey: #E0E0E0;
+$less-grey: #616161;
+$white: rgba(255, 255, 255, 1);
+
+@mixin mobile-portrait-and-below {
+  @media only screen and (orientation: portrait) {
     display: flex;
 
-    .perks--group {
-      flex: 1;
-      margin: 0px 5px;
-      
-      
+    &--groups {
+      display: flex;
+      flex-direction: column;
 
-      
+      .perks--group {
+        flex: auto;
+        margin: 0px 0px 30px 0px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }    
+    }
+  }
+}
+
+.perks {
+  font-family: sans-serif;
+  max-width: 900px;
+
+  &--body {
+    width: 100%;  
+  }
+  
+  &--groups {
+    display: flex;
+  
+    .perks--group { 
+      flex-grow: 0;
+      flex-basis: 33%;
+      display: flex;
+      flex-direction: column;
+      margin: 0px 10px 0px 0px;
       position: relative;
-
-      
       
       .perks--image {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        height: 180px;
         top: 0; 
         left: 0;
-        height: 180px;
         width: 100%;
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
         position: relative;
 
         h2 {
-          font-size: 24px;
           position: absolute;
+          font-size: 24px;
+          font-weight: normal;
           bottom: 0;
+          margin-bottom:0px;
+          padding-bottom: 16px;
           text-align: center;
           width: inherit;
-          color: rgba(255, 255, 255, 1);
+          color: $white;
         }
       }
-    }
-
-    .perks--list {
-      margin: 0px 5px;
-      width: 100%;
-      border: 1px solid grey;
-
-      .perks--item {
-        &:first-child {
-          border: 0px;
-        }
+      
+      .perks--list { 
+        flex: auto;
+        border: 1px solid $grey;
         
-        display: block;
-        text-align: left;
-        border-top: 1px solid grey;
-        padding: 5px 10px;
+        .perks--item {  
+          text-align: left;
+          font-size: 16px;
+          color: $less-grey;
+          border-top: 1px solid $grey;
+          
+          padding: 12px 0px;
+          margin: 0px 18px;
+
+          &:first-child {
+            margin-top: 10px;
+            border-top: none;
+          }
+
+          &:last-child {
+            padding-bottom: 0px;
+            margin-bottom: 25px;
+          }
+        } 
       }
     }
   }
 
+  @include mobile-portrait-and-below()
 }
+
 
 
